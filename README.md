@@ -16,10 +16,12 @@
 
 Получите уникальные названия районов из таблицы с адресами, которые начинаются на “K” и заканчиваются на “a”, и не содержат пробелов.
 
-![alt text](https://github.com/Fameq/10.1-hw//img/master/node1.png)
+![alt text](https://github.com/Fameq/12.3-hw//img/master/task1.png)
 
 ```sql
-ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+SELECT (district)
+FROM address
+WHERE district  LIKE 'K%' and district LIKE '%a' and district NOT LIKE '% %'; 
 ```
 
 ### Задание 2.
@@ -27,7 +29,7 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года **включительно**, 
 и стоимость которых превышает 10.00.
 
-![alt text](https://github.com/Fameq/10.1-hw//img/master/node1.png)
+![alt text](https://github.com/Fameq/12.3-hw//img/master/task2.png)
 
 ```sql
 ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
@@ -37,7 +39,7 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 Получите последние 5 аренд фильмов.
 
-![alt text](https://github.com/Fameq/10.1-hw//img/master/node1.png)
+![alt text](https://github.com/Fameq/12.3-hw//img/master/task3.png)
 
 ```sql
 ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
@@ -51,7 +53,7 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 - все буквы в фамилии и имени из верхнего регистра переведите в нижний регистр,
 - замените буквы 'll' в именах на 'pp'
 
-![alt text](https://github.com/Fameq/10.1-hw//img/master/node1.png)
+![alt text](https://github.com/Fameq/12.3-hw//img/master/task4.png)
 
 ```sql
 ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
