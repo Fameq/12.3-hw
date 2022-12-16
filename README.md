@@ -16,7 +16,7 @@
 
 Получите уникальные названия районов из таблицы с адресами, которые начинаются на “K” и заканчиваются на “a”, и не содержат пробелов.
 
-![alt text](https://github.com/Fameq/12.3-hw//img/master/task1.png)
+![alt text](https://github.com/Fameq/12.3-hw/blob/master/img/task1.png)
 
 ```sql
 SELECT (district)
@@ -29,10 +29,12 @@ WHERE district  LIKE 'K%' and district LIKE '%a' and district NOT LIKE '% %';
 Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года **включительно**, 
 и стоимость которых превышает 10.00.
 
-![alt text](https://github.com/Fameq/12.3-hw//img/master/task2.png)
+![alt text](https://github.com/Fameq/12.3-hw/blob/master/img/task2.png)
 
 ```sql
-ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+SELECT *
+FROM payment  
+WHERE DATE_FORMAT(payment_date, '%Y-%c-%e')  BETWEEN '2005-6-15' AND '2005-6-18' AND amount > 10;
 ```
 
 ### Задание 3.
@@ -58,7 +60,7 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 ```sql
 ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
-
+ 
 ## Дополнительные задания (со звездочкой*)
 Эти задания дополнительные (не обязательные к выполнению) и никак не повлияют на получение вами зачета по этому домашнему заданию. Вы можете их выполнить, если хотите глубже и/или шире разобраться в материале.
 
