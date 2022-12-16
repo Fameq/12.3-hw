@@ -41,10 +41,13 @@ WHERE DATE_FORMAT(payment_date, '%Y-%c-%e')  BETWEEN '2005-6-15' AND '2005-6-18'
 
 Получите последние 5 аренд фильмов.
 
-![alt text](https://github.com/Fameq/12.3-hw//img/master/task3.png)
+![alt text](https://github.com/Fameq/12.3-hw/blob/master/img/task3.png)
 
 ```sql
-ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+SELECT *
+FROM rental 
+ORDER BY (rental_date) DESC
+LIMIT 5 ;
 ```
 
 ### Задание 4.
@@ -55,10 +58,15 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 - все буквы в фамилии и имени из верхнего регистра переведите в нижний регистр,
 - замените буквы 'll' в именах на 'pp'
 
-![alt text](https://github.com/Fameq/12.3-hw//img/master/task4.png)
+![alt text](https://github.com/Fameq/12.3-hw/blob/master/img/task4.png)
 
 ```sql
-ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+SELECT 
+	CONCAT_WS (' ', first_name, last_name),
+	CONCAT_WS (' ', LOWER(first_name), LOWER(last_name)),
+	CONCAT_WS (' ', LOWER(REPLACE(first_name, 'LL', 'PP')), LOWER(last_name)) 
+FROM customer
+WHERE first_name LIKE 'Willie' OR first_name LIKE 'Kelly' ;
 ```
  
 ## Дополнительные задания (со звездочкой*)
