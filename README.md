@@ -16,7 +16,7 @@
 
 Получите уникальные названия районов из таблицы с адресами, которые начинаются на “K” и заканчиваются на “a”, и не содержат пробелов.
 
-![alt text](https://github.com/Fameq/12.3-hw//img/master/task1.png)
+![alt text](https://github.com/Fameq/12.3-hw/blob/master/img/task1.png)
 
 ```sql
 SELECT (district)
