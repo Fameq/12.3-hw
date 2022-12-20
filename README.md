@@ -19,7 +19,7 @@
 ![alt text](https://github.com/Fameq/12.3-hw/blob/master/img/task1.png)
 
 ```sql
-SELECT (district)
+SELECT DISTINCT (district)
 FROM address
 WHERE district  LIKE 'K%' and district LIKE '%a' and district NOT LIKE '% %'; 
 ```
